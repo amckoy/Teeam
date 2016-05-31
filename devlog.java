@@ -21,9 +21,9 @@ public class devlog {
 	//parsing int because nextline skips over progress call
 	person = Integer.parseInt(io.nextLine());
 	System.out.print("Progress made: ");
-	progress = io.next();
+	progress = io.nextLine();
 	devlog.write(timestamp + "\n");
-	devlog.write("\t" + peoples[person] + ": " + progress + "\n");
+	devlog.write("\t" + peoples[person] + ": " + progress + "\n\n");
 	devlog.close();
     }
     

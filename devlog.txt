@@ -1,2 +1,9 @@
 Thu, 05/19/16, 10:21 PM
 	Ayman: added devlog
+
+Tue, 05/31/16, 11:40 AM
+	Derek: added plan
+
+Tue, 05/31/16, 11:41 AM
+	Ayman: fixed devlog
+
