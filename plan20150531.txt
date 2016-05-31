@@ -1,0 +1,37 @@
+Ideal work order:
+In StarCraft there are 3 factions with their own units, we’re going to implement the Terran first and then move on to the others after most of the work is done.
+
+[ ] Decide on which approach we’re going with.
+[ ] Draw out the UML diagrams, flesh out all the methods and classes needed. (Terran)
+[ ] Create bases.
+[ ] Rudimentary GUI, implement GUI elements for every following step.
+[ ] Create resource row.
+[ ] AI
+[ ] Get workers in. (Terran)
+[ ] Create attack row.
+[ ] Get 1 attacking unit in that can satisfy the win condition. (Terran)
+
+Bare minimum achieved­­­
+
+[ ] Create defense row.
+[ ] Get attacking and defending to work.
+
+­Foundation completed­­­
+
+[ ] Add in more units with different stats (Terran)
+[ ] Add an effect for 1 unit or 1 spell card.
+[ ] Continue to add effects or spell cards one­by­one with testing until satisfied.
+[ ] Have a section of rules and tips for players.
+
+Can now be proud of work and show off to friends­­­
+
+[ ] Protoss units
+[ ] Zerg units
+[ ] Make the GUI look presentable.
+[ ] Make the GUI look good.
+[ ] Make the GUI look great.
+[ ] Make the GUI look beautiful.
+
+--------------------ABSOLUTELY CRAZY IDEAS-----------------------
+
+[ ] Multiplayer client/server using sockets?
