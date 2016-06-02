@@ -13,3 +13,6 @@ Tue, 05/31/16, 10:47 AM
 Thu, 06/02/16, 11:34 AM
 	Derek: added mutators and accesors to variables of card.java
 
+Thu, 06/02/16, 01:15 PM
+	Ayman: added game
+
