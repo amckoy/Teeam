@@ -13,8 +13,22 @@ Tue, 05/31/16, 10:47 AM
 Thu, 06/02/16, 11:34 AM
 	Derek: added mutators and accesors to variables of card.java
 
+<<<<<<< HEAD
+Thu, 06/02/16, 11:43 AM
+	Derek: created unit.java
+	
+Thu, 06/02/16, 11:55 AM
+	Derek: edited unit.java
+=======
 Thu, 06/02/16, 01:15 PM
 	Ayman: added game
+>>>>>>> 94f27551c02b4408db9e19b99d172fd78ced90f9
+
+Fri, 06/03/16, 11:25 AM
+	Derek: Added Player
+
+Fri, 06/03/16, 11:25 AM
+	Ayman: Added deck
 
 Fri, 06/03/16, 10:46 AM
 	Ayman: Fixed card, more work on unit
