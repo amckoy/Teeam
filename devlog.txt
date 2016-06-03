@@ -24,3 +24,9 @@ Thu, 06/02/16, 01:15 PM
 	Ayman: added game
 >>>>>>> 94f27551c02b4408db9e19b99d172fd78ced90f9
 
+Fri, 06/03/16, 11:25 AM
+	Derek: Added Player
+
+Fri, 06/03/16, 11:25 AM
+	Ayman: Added deck
+
