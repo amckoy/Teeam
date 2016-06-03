@@ -36,3 +36,6 @@ Fri, 06/03/16, 10:46 AM
 Fri, 06/03/16, 10:46 AM
 	Adam: Started spell classes
 
+Fri, 06/03/16, 02:07 PM
+	Ayman: Added attackunit, finished and fixed unit
+

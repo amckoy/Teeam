@@ -6,7 +6,7 @@ public class Player {
     int health;
     int minerals;
     int supply;
-    //Tree techTree;
+    //Tree techTree; for later implementation if we have time
     Deck[] deck;
 
     // Mutators and Accessors
