@@ -1,3 +1,7 @@
-/* the attack unit that does damage */
+/* the attack unit that is the main source of damage */
 
-public class AttackUnit
+public class AttackUnit {
+
+
+    
+}
