@@ -1,8 +1,5 @@
 /* the basic super-class for each type of unit */
 
-
-/* REAL TALK SHOULD WE ABSTRACT THIS OR NAH */
-
 public class Unit extends Card {
     
     // do we need boolean? or just function

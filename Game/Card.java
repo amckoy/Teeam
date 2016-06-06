@@ -11,8 +11,6 @@ public class Card {
     }
     
     // Mutators + Accessors
-<<<<<<< HEAD
-
     protected int getCost() {
         return cost;
     }
@@ -25,35 +23,4 @@ public class Card {
         cost = newCost;
     }
 
-=======
-
-    protected void setAttack( int newAttack ){
-	attack = newAttack;
-    }
-
-    protected void setHealth( int newHealth ){
-	health = newHealth;
-    }
-
-    protected void setCost( int newCode ){
-	code = newCode;
-    }
-
-    protected int getAttack(){
-	return attack;
-    }
-
-    protected int getHealth(){
-	return health;
-    }
-
-    protected int getCost(){
-	return cost;
-    }
-
-    protected String getName(){
-	return name;
-    }
-
->>>>>>> 9da602fb83fcf142fdc104cad568a4fc3732a911
 }
