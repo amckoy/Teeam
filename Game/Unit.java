@@ -22,7 +22,9 @@ public class Unit extends Card {
     // }
     
     protected int setHealth(int newHP) {
+        int temp = health;
         health = newHP;
+        return temp;
     }
 
     protected int getHealth() {
