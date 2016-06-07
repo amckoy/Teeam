@@ -4,7 +4,8 @@ Player p2;
 void setup() {
   size(1024, 720);
   background(0);
-  p1 = new Player();
+  
+  
 }
 
 void draw() {
