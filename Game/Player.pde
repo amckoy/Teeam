@@ -53,4 +53,9 @@ public class Player {
         return isDead;
     }
 
+  public float hpPercent() {
+    float hpPercent = ((float)(health)) / ((float)(30));
+    return hpPercent * PI;
+  }
+
 }
