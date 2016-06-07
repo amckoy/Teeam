@@ -1,7 +1,11 @@
-import java.util.PriorityQueue;
+import java.util.LinkedList;
 
 public class Deck {
 
+    LinkedList deck;
     
+    public Deck() {
+       
+    }
     
 }

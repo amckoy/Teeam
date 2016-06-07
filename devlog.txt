@@ -48,3 +48,6 @@ Mon, 06/06/16, 11:36 AM
 Mon, 06/06/16, 03:59 PM
 	Ayman: More progress on game
 
+Tue, 06/07/16, 03:06 PM
+	Ayman: got health bars working
+

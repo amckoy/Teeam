@@ -7,10 +7,10 @@ public class Player {
     private int resources;
     //Tree techTree; for later implementation if we have time
     private boolean isDead;
-    public Deck[] deck;
+    public Deck deck;
 
     //constructor
-    public Player(int cRace, Deck[] cDeck) {
+    public Player(int cRace, Deck cDeck) {
         race = cRace;
         health = 30;
         resources = 1;
