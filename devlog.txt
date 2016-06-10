@@ -57,3 +57,6 @@ Tue, 06/07/16, 07:52 PM
 Fri, 06/10/16, 11:13 AM
 	Adam: Added spell
 
+Fri, 06/10/16, 11:30 AM
+	Derek: TerranUnit
+
