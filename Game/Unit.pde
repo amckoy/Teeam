@@ -5,6 +5,7 @@ public class Unit extends Card {
   // do we need boolean? or just function
   private boolean isDead;
   //all of them will have health
+  private int maxHealth;
   private int health;
   private int attack;
 	
@@ -15,6 +16,10 @@ public class Unit extends Card {
   }
 
 	//Accessors + Mutators
+  public int getMaxHealth() {
+    return maxHealth;
+  }
+
   public int getHealth() {
     return health;
   }
