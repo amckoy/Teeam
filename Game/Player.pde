@@ -7,6 +7,8 @@ public class Player {
     private int resources;
     //Tree techTree; for later implementation if we have time
     private boolean isDead;
+    public Unit[] board;
+    public Card activeSpell;
     public Deck deck;
 
     //constructor
@@ -15,6 +17,7 @@ public class Player {
         health = 30;
         resources = 1;
         isDead = false;
+        board = new Unit[5];
         deck = cDeck;
     }
     
