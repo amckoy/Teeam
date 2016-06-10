@@ -54,3 +54,6 @@ Tue, 06/07/16, 03:06 PM
 Tue, 06/07/16, 07:52 PM
 	Ayman: Finished working health bars, attempting to get splash image working
 
+Fri, 06/10/16, 11:13 AM
+	Adam: Added spell
+
