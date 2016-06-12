@@ -1,53 +1,96 @@
-/* the basic super-class for each type of unit */
-
 public class Unit extends Card {
-	
-  // do we need boolean? or just function
-  private boolean isDead;
-  //all of them will have health
-  private int maxHealth;
-  private int health;
-  private int attack;
-	
-  public Unit(int hp, int atk) {
-    health = hp;
-    attack = atk;
+
+  //Attributes
+  boolean isDead;
+  boolean isAerial;
+  boolean isCloaked;
+  boolean isDetector;
+  int maxLife;
+  int life;
+  int groundAttack;
+  int airAttack;
+
+  //Constructors
+  Unit() {
+    this(0, "foo", false, false, 1, 1, 1, 1);
+  }
+
+  Unit(int newCost, String newName, boolean newIsAerial, boolean newIsCloaked, boolean newIsDetector, int newMaxLife, int newLife, int newGroundAttack, int newAirAttack) {
+    super(newCost, newName);
     isDead = false;
+    isAerial = newIsAerial;
+    isCloaked = newIsCloaked;
+    isDetector = newIsDetector;
+    maxLife = newMaxLife;
+    life = newLife;
+    groundAttack = newGroundAttack;
+    airAttack = newAirAttack;
   }
 
-	//Accessors + Mutators
-  public int getMaxHealth() {
-    return maxHealth;
-  }
-
-  public int getHealth() {
-    return health;
+  //Accessors + Mutators
+  int getMaxLife() {
+    return maxLife;
   }
   
-  public int setHealth(int newHP) {
-    int temp = health;
-    health = newHP;
-    return temp;
+  void setMaxLife() {
+    maxLife = newMaxLife;
   }
 
-  public int getAttack() {
-    return attack;
+  int getLife() {
+    return life;
   }
 
-  public int setAttack(int newAttack) {
-    int temp = attack;
-    attack = newAttack;
-    return temp;
+  void setLife(int newLife) {
+    life = newLife;
   }
-  
-  protected boolean isDead() {
-    if( health <= 0 ) {
+
+  int getGroundAttack() {
+    return groundAttack;
+  }
+
+  void setGroundAttack(int newGroundAttack) {
+    groundAttack = newGroundAttack;
+  }
+
+  int getAirAttack() {
+    return airAttack;
+  }
+
+  void setAirAttack(int newAirAttack) {
+    airAttack = newAirAttack;
+  }
+
+  boolean isDead() {
+    if ( life <= 0 ) {
       isDead = true;
     }
-    else {
+    else{
       isDead = false;
     }
     return isDead;
   }
-	
+
+  boolean isAerial() {
+    return isAerial;
+  }
+
+  void setIsAerial(boolean newIsAerial) {
+    isAerial = newIsAerial;
+  }
+
+  boolean isCloaked() {
+    return isCloaked;
+  }
+
+  void setIsCloaked(boolean newIsCloaked) {
+    isCloaked = newIsCloaked;
+  }
+
+  boolean isDetector() {
+    return isDetector;
+  }
+
+  void setIsDetector(boolean newIsDetector) {
+    isDetector = newIsDetector;
+  }
 }

@@ -7,7 +7,7 @@ void setup() {
   background(0);
   p1 = new Player(0, ayy);
   p2 = new Player(1, ayy);
-  for( int i = 0; i < p1.board.length+5; i++ ){
+  for ( int i = 0; i < p1.board.length+5; i++ ) {
     rect( width / (p1.board.length + 2) * (i+1), height/4 * 3, 50, 50);
   }
 }
@@ -16,8 +16,7 @@ void draw() {
   //more testing, it should do something besides autoreset
   if (p1.isDead()) {
     p1.setHealth(30);
-  }
-  else if (p2.isDead()) {
+  } else if (p2.isDead()) {
     p2.setHealth(30);
   }
 
@@ -30,25 +29,22 @@ void draw() {
   fill(0);
   arc(width / 2, 0, 225, 225, 0, PI - p2.hpPercent());
   arc(width / 2, height, 225, 225, p1.hpPercent() - PI, 0);
- 
+
   //testing tool
   if (mousePressed) {
     p1.setHealth(p1.getHealth() - 1);
     p2.setHealth(p2.getHealth() - 1);
     System.out.println(p1.getHealth());
   }
-   
 }
 
 //returns the player image of whichever class they belong to
 PImage whichClass(Player p) {
   if (p.getRace() == 0) {
     return loadImage("terran.jpg");
-  }
-  else if (p.getRace() == 1) {
+  } else if (p.getRace() == 1) {
     return loadImage("zerg.jpg");
-  }
-  else {
+  } else {
     return loadImage("protoss.jpg");
   }
 }

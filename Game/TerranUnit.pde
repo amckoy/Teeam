@@ -1,5 +1,5 @@
-public class TerranUnit extends Unit{
-  public TerranUnit(){
+public class TerranUnit extends Unit {
+  public TerranUnit() {
     super(0, 0);
   }
 }
@@ -35,7 +35,7 @@ public class TerranUnit extends Unit{
 //    attack = 0;
 //    isDead = false;
 //  }
-  
+
 //  public void heal(Unit target){
 //    target.setHealth( target.getMaxHealth() );
 //  }

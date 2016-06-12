@@ -60,3 +60,9 @@ Fri, 06/10/16, 11:13 AM
 Fri, 06/10/16, 11:30 AM
 	Derek: TerranUnit
 
+Fri, 06/10/16, 11:46 AM
+	Derek: Expanded upon game
+
+Sun, 06/12/16, 12:57 PM
+	Derek: fleshed out unit card and player
+
