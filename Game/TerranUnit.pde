@@ -1,42 +1,30 @@
 public class TerranUnit extends Unit {
-  public TerranUnit() {
-    super(0, 0);
+
+  //Constructors
+  TerranUnit(int newCost, String newName, boolean newIsAerial, boolean newIsCloaked, boolean newIsDetector, int newMaxLife, int newLife, int newGroundAttack, int newAirAttack) {
+    super(newCost, newName, newIsAerial, newIsCloaked, newIsDetector, newMaxLife, newLife, newGroundAttack, newAirAttack);
   }
 }
 
-//class Marine extends TerranUnit{
-//  public Marine(){
-//    cost = 1;
-//    name = "Marine";
-//    maxHealth = 1;
-//    health = 1;
-//    atttack = 2;
-//    isDead = false;
-//  }
-//}
+//Unit(int newCost, String newName, boolean newIsAerial, boolean newIsCloaked, boolean newIsDetector, int newMaxLife, int newLife, int newGroundAttack, int newAirAttack)
 
-//class Firebat extends TerranUnit{
-//  public Firebat(){
-//    cost = 2;
-//    name = "Marine";
-//    maxHealth = 2;
-//    health = 2;
-//    attack = 3;
-//    isDead = false;
-//  }
-//}
+public class Marine extends TerranUnit {
+  Marine() {
+    super(1, "Marine", false, false, false, 1, 1, 2, 2);
+  }
+}
 
-//class Medic extends TerranUnit{
-//  public Medic(){
-//    cost = 3;
-//    name = "Medic";
-//    maxHealth = 3;
-//    health = 3;
-//    attack = 0;
-//    isDead = false;
-//  }
+public class Firebat extends TerranUnit {
+  Firebat() {
+    super(2, "Firebat", false, false, false, 2, 2, 3, 0);
+  }
+}
 
-//  public void heal(Unit target){
-//    target.setHealth( target.getMaxHealth() );
-//  }
-//}
+public class Medic extends TerranUnit {
+  public Medic() {
+    super(1, "Medic", false, false, false, 3, 3, 0, 0);
+  }
+  void heal(Unit target) {
+    target.setLife( target.getMaxLife() );
+  }
+}

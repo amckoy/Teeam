@@ -6,11 +6,12 @@ public class Player {
   int life;
   int workers;
   Unit[] units;
+  Unit[] hand;
   Spell activeSpell;
   Deck deck;
 
   //Constructors
-  Player(int newrace, int newRace, Deck newDeck) {
+  Player(int newRace, Deck newDeck) {
     isDead = false;
     race = newRace;
     life = 30;
@@ -67,9 +68,10 @@ public class Player {
     }
     return isDead;
   }
-
-  float hpPercent() {
-    float hpPercent = ((float)(health)) / ((float)(30));
-    return hpPercent * PI;
+  
+  float lifePercent() {
+    float lifePercent = life / 30.0;
+    return lifePercent * PI;
   }
+
 }

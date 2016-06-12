@@ -12,7 +12,7 @@ public class Unit extends Card {
 
   //Constructors
   Unit() {
-    this(0, "foo", false, false, 1, 1, 1, 1);
+    this(0, "foo", false, false, false, 1, 1, 1, 1);
   }
 
   Unit(int newCost, String newName, boolean newIsAerial, boolean newIsCloaked, boolean newIsDetector, int newMaxLife, int newLife, int newGroundAttack, int newAirAttack) {
@@ -32,7 +32,7 @@ public class Unit extends Card {
     return maxLife;
   }
   
-  void setMaxLife() {
+  void setMaxLife(int newMaxLife) {
     maxLife = newMaxLife;
   }
 
