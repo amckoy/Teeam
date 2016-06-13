@@ -1,5 +1,3 @@
-/* Class to manage deck of players, and to draw their individual board*/
-
 import java.util.LinkedList;
 
 public class Deck {
@@ -126,15 +124,22 @@ public class Deck {
   public Unit combine(int index, int index2) {
     if (board[index].getClass().equals(board[index2].getClass())) {
       //average of health plus random amount added from average of cost
-      int hpavg = (board[index].getHealth() + board[index2].getHealth()) - (int)(Math.random() * ((board[index].getCost() + board[index2].getCost()) / 2.0));
+      int hpavg = (board[index].getLife() + board[index2].getLife()) - (int)(Math.random() * ((board[index].getCost() + board[index2].getCost()) / 2.0));
       //average of attacks plus random amount added from average of cost
-      int atkavg = (board[index].getAttack() + board[index2].getAttack()) - (int)(Math.random() * ((board[index].getCost() + board[index2].getCost()) / 2.0));
+      int atkavg = (board[index].getGroundAttack() + board[index2].getGroundAttack()) - (int)(Math.random() * ((board[index].getCost() + board[index2].getCost()) / 2.0));
       //random semi-balanced cost;
       int costavg = (int)(Math.random() * hpavg) + (int)(Math.random() * atkavg);
       return new Unit(hpavg, atkavg, costavg, this);
     }
     else {
       return (Unit)null;
+    }
+  }
+  
+  void marines() {
+    for(int i = 0; i < 40; i++){
+      Marine marine = new Marine(); 
+      deck.addFirst( marine );
     }
   }
 
