@@ -126,10 +126,11 @@ public class Deck {
       //average of health plus random amount added from average of cost
       int hpavg = (board[index].getLife() + board[index2].getLife()) - (int)(Math.random() * ((board[index].getCost() + board[index2].getCost()) / 2.0));
       //average of attacks plus random amount added from average of cost
-      int atkavg = (board[index].getGroundAttack() + board[index2].getGroundAttack()) - (int)(Math.random() * ((board[index].getCost() + board[index2].getCost()) / 2.0));
+      int gratkavg = (board[index].getGroundAttack() + board[index2].getGroundAttack()) - (int)(Math.random() * ((board[index].getCost() + board[index2].getCost()) / 2.0));
+      int airatkavg = (board[index].getAirAttack() + board[index2].getAirAttack()) - (int)(Math.random() * ((board[index].getCost() + board[index2].getCost()) / 2.0));
       //random semi-balanced cost;
       int costavg = (int)(Math.random() * hpavg) + (int)(Math.random() * atkavg);
-      return new Unit(hpavg, atkavg, costavg, this);
+      return new Unit(hpavg, gratkavg, airatkavg, costavg, this);
     }
     else {
       return (Unit)null;

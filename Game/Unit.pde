@@ -10,15 +10,17 @@ public class Unit extends Card {
   protected boolean isDetector;
   private int maxHealth;
   private int health;
-  private int attack;
+  private int groundattack;
+  private int airattack;
   //this is to make life easier for abilities and such
   private Deck deck;
   
-  public Unit(int hp, int atk, int newCost, Deck newDeck) {
+  public Unit(int hp, int gratk, int airatk, int newCost, Deck newDeck) {
     super(newCost);
     health = hp;
     maxHealth = hp;
-    attack = atk;
+    groundattack = gratk;
+    airattack = airatk;
     isDead = false;
     deck = newDeck;
   }
@@ -32,8 +34,12 @@ public class Unit extends Card {
     return deck;
   }
 
-  public int getAttack() {
-    return attack;
+  public int getGroundAttack() {
+    return groundattack;
+  }
+
+  public int getAirAttack() {
+    return airattack;
   }
 
   public int getHealth() {
@@ -86,13 +92,17 @@ public class Unit extends Card {
     return temp;
   }
 
-  public int setAttack(int newAttack) {
-    int temp = attack;
-    attack = newAttack;
+  public int setGroundAttack(int newAttack) {
+    int temp = groundattack;
+    groundattack = newAttack;
     return temp;
   }
 
-  
+  public int setAirAttack(int newAttack) {
+    int temp = airattack;
+    airattack = newAttack;
+    return temp;
+  }  
   
   void draw() {
     

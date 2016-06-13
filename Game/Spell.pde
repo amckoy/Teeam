@@ -1,19 +1,25 @@
 abstract class Spell extends Card {
 
-  private int damage;
+  private int grounddamage;
+  private int airdamage;
   private int heal;
   //this is to make life easier for abilities and such
   private Deck deck;
 
-  public Spell(int dmg, int hp, int newCost, Deck newDeck) {
+  public Spell(int grdmg, int airdmg, int hp, int newCost, Deck newDeck) {
     super(newCost);
-    damage = dmg;
+    grounddamage = grdmg;
+    airdamage = airdmg;
     heal = hp;
     deck = newDeck;
   }
 
-  public int getDamage() {
-    return damage;
+  public int getGroundDamage() {
+    return grounddamage;
+  }
+
+  public int getAirDamage() {
+    return airdamage;
   }
 
   public int getHeal() {

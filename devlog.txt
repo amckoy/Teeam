@@ -73,3 +73,6 @@ Sun, 06/12/16, 02:26 PM
 Mon, 06/13/16, 12:38 AM
 	Derek: game stuff
 
+Mon, 06/13/16, 02:45 AM
+	Ayman: moved everything over to ground and attack instead of attack
+
