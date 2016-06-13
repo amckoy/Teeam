@@ -7,9 +7,7 @@ void setup() {
   background(0);
   p1 = new Player(0, ayy);
   p2 = new Player(1, ayy);
-  for( int i = 0; i < p1.board.length+5; i++ ){
-    rect( width / (p1.board.length + 2) * (i+1), height/4 * 3, 50, 50);
-  }
+
 }
 
 void draw() {

@@ -60,3 +60,6 @@ Fri, 06/10/16, 11:13 AM
 Fri, 06/10/16, 11:30 AM
 	Derek: TerranUnit
 
+Sun, 06/12/16, 09:59 PM
+	Ayman: Did deck, got spell working, created a deck structure, created a card-defining structure, added a few basic card classes
+

@@ -8,16 +8,25 @@ public class Unit extends Card {
   private int maxHealth;
   private int health;
   private int attack;
-	
-  public Unit(int hp, int atk) {
+  //this is to make life easier for abilities and such
+  private Deck deck;
+  
+  public Unit(int hp, int atk, int newCost, Deck newDeck) {
+    super(newCost);
     health = hp;
+    maxHealth = hp;
     attack = atk;
     isDead = false;
+    deck = newDeck;
   }
 
 	//Accessors + Mutators
   public int getMaxHealth() {
     return maxHealth;
+  }
+
+  public Deck getDeck() {
+    return deck;
   }
 
   public int getHealth() {
@@ -49,5 +58,9 @@ public class Unit extends Card {
     }
     return isDead;
   }
-	
+  
+  void draw() {
+    
+  }
+  
 }
