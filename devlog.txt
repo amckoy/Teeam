@@ -13,16 +13,14 @@ Tue, 05/31/16, 10:47 AM
 Thu, 06/02/16, 11:34 AM
 	Derek: added mutators and accesors to variables of card.java
 
-<<<<<<< HEAD
 Thu, 06/02/16, 11:43 AM
 	Derek: created unit.java
 	
 Thu, 06/02/16, 11:55 AM
 	Derek: edited unit.java
-=======
+
 Thu, 06/02/16, 01:15 PM
 	Ayman: added game
->>>>>>> 94f27551c02b4408db9e19b99d172fd78ced90f9
 
 Fri, 06/03/16, 11:25 AM
 	Derek: Added Player
@@ -60,6 +58,12 @@ Fri, 06/10/16, 11:13 AM
 Fri, 06/10/16, 11:30 AM
 	Derek: TerranUnit
 
+Fri, 06/10/16, 11:46 AM
+	Derek: Expanded upon game
+
+Sun, 06/12/16, 12:57 PM
+	Derek: fleshed out unit card and player
+ 
 Sun, 06/12/16, 09:59 PM
 	Ayman: Did deck, got spell working, created a deck structure, created a card-defining structure, added a few basic card classes
 

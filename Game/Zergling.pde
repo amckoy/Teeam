@@ -3,6 +3,9 @@ public class Zergling extends Unit{
   public Zergling(Deck newDeck) {
     super(1, 1, 1, newDeck);
     name = "Zergling";
+    isAerial = false;
+    isCloaked = false;
+    isDetector = false;
   }
 
   public void ability() {  
