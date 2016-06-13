@@ -1,36 +1,33 @@
-/* The basic card class */
+public class Card {
 
-abstract class Card {
+  // Attributes
+  int cost;
+  String name;
 
-  protected int cost;
-  protected String name;
+  //Constructors
+  Card() {
+    this(0, "foo");
+  }
   
-  public Card() {
-    cost = 0;
-    name = "";
-  }
-
-  public Card(int newCost) {
-    cost = newCost;
-    name = "";
-  }
-
-  public Card(int newCost, String newName) {
+  Card(int newCost, String newName) {
     cost = newCost;
     name = newName;
   }
-    
-  // Mutators + Accessors
-  protected int getCost() {
+
+  // Accessors + Mutators
+  int getCost() {
     return cost;
   }
-
-  protected String getName() {
-    return name;
-  }
-
-  protected void setCost( int newCost ) {
+  
+  void setCost(int newCost) {
     cost = newCost;
   }
 
+  String getName() {
+    return name;
+  }
+  
+  void setName(String newName){
+    name = newName;
+  }
 }

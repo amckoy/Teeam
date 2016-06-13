@@ -79,3 +79,6 @@ Mon, 06/13/16, 02:45 AM
 Mon, 06/13/16, 03:32 AM
 	Ayman: added some terran classes
 
+Mon, 06/13/16, 05:48 AM
+	Derek: bare minimum achieved, barely. wish I worked on this more, probably will over the summer ; ;
+

@@ -1,112 +1,112 @@
-/* the basic super-class for each type of unit */
-
 public class Unit extends Card {
-	
-  // do we need boolean? or just function
-  private boolean isDead;
-  //protected because only actually initialized units will have this
-  protected boolean isAerial;
-  protected boolean isCloaked;
-  protected boolean isDetector;
-  private int maxHealth;
-  private int health;
-  private int groundattack;
-  private int airattack;
-  //this is to make life easier for abilities and such
-  private Deck deck;
-  
-  public Unit(int hp, int gratk, int airatk, int newCost, Deck newDeck) {
-    super(newCost);
-    health = hp;
-    maxHealth = hp;
-    groundattack = gratk;
-    airattack = airatk;
+
+  //Attributes
+  boolean isDead;
+  boolean isAerial;
+  boolean isCloaked;
+  boolean isDetector;
+  boolean attacked;
+  int maxLife;
+  int life;
+  int groundAttack;
+  int airAttack;
+
+  //Constructors
+  Unit() {
+    this(0, "foo", false, false, false, 1, 1, 1, 1);
+  }
+
+  Unit(int newCost, String newName, boolean newIsAerial, boolean newIsCloaked, boolean newIsDetector, int newMaxLife, int newLife, int newGroundAttack, int newAirAttack) {
+    super(newCost, newName);
+    attacked = false;
     isDead = false;
-    deck = newDeck;
+    isAerial = newIsAerial;
+    isCloaked = newIsCloaked;
+    isDetector = newIsDetector;
+    maxLife = newMaxLife;
+    life = newLife;
+    groundAttack = newGroundAttack;
+    airAttack = newAirAttack;
   }
 
-	//Accessors + Mutators
-  public int getMaxHealth() {
-    return maxHealth;
+  //Accessors + Mutators
+  void setAttacked(boolean newAttacked){
+    attacked = newAttacked;
+  }
+  void attack(Player opponent){
+    opponent.setLife( opponent.getLife() - groundAttack );
+    System.out.println("attacked");
+  }
+  
+  void attack(Unit target){
+    target.setLife( target.getLife() - groundAttack ); 
+    this.setLife( this.getLife() - target.getGroundAttack() );
+    System.out.println("attacked");
+  }
+  
+  int getMaxLife() {
+    return maxLife;
+  }
+  
+  void setMaxLife(int newMaxLife) {
+    maxLife = newMaxLife;
   }
 
-  public Deck getDeck() {
-    return deck;
+  int getLife() {
+    return life;
   }
 
-  public int getGroundAttack() {
-    return groundattack;
+  void setLife(int newLife) {
+    life = newLife;
   }
 
-  public int getAirAttack() {
-    return airattack;
+  int getGroundAttack() {
+    return groundAttack;
   }
 
-  public int getHealth() {
-    return health;
+  void setGroundAttack(int newGroundAttack) {
+    groundAttack = newGroundAttack;
   }
 
-  public boolean isDead() {
-    if( health <= 0 ) {
+  int getAirAttack() {
+    return airAttack;
+  }
+
+  void setAirAttack(int newAirAttack) {
+    airAttack = newAirAttack;
+  }
+
+  boolean isDead() {
+    if ( life <= 0 ) {
       isDead = true;
     }
-    else {
+    else{
       isDead = false;
     }
     return isDead;
   }
 
-  public boolean isAerial() {
+  boolean isAerial() {
     return isAerial;
   }
 
-  public boolean isCloaked() {
+  void setIsAerial(boolean newIsAerial) {
+    isAerial = newIsAerial;
+  }
+
+  boolean isCloaked() {
     return isCloaked;
   }
 
-  public boolean isDetector() {
+  void setIsCloaked(boolean newIsCloaked) {
+    isCloaked = newIsCloaked;
+  }
+
+  boolean isDetector() {
     return isDetector;
   }
 
-  public boolean setAerial(boolean newAerial) {
-    boolean temp = isAerial;
-    isAerial = newAerial;
-    return temp;
+  void setIsDetector(boolean newIsDetector) {
+    isDetector = newIsDetector;
   }
-
-  public boolean setCloaked(boolean newCloaked) {
-    boolean temp = isCloaked;
-    isCloaked = newCloaked;
-    return temp;
-  }
-
-  public boolean setDetector(boolean newDetector) {
-    boolean temp = isDetector;
-    isDetector = newDetector;
-    return temp;
-  }
-  
-  public int setHealth(int newHP) {
-    int temp = health;
-    health = newHP;
-    isDead();
-    return temp;
-  }
-
-  public int setGroundAttack(int newAttack) {
-    int temp = groundattack;
-    groundattack = newAttack;
-    return temp;
-  }
-
-  public int setAirAttack(int newAttack) {
-    int temp = airattack;
-    airattack = newAttack;
-    return temp;
-  }  
-  
-  void draw() {
-    
-  }
-  
 }
