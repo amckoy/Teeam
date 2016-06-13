@@ -6,20 +6,16 @@ Player p1;
 Player p2;
 
 void setup() {
-  size(1000, 720);
+  size(1024, 720);
   background(0);
-  p1 = new Player(0, new Deck());
-  p2 = new Player(1, new Deck());
-  p1.getDeck().marines();
-  p2.getDeck().marines();
-  for( int i = 0; i < 8; i++ ){
-    p1.getDeck().drawCard();
-    p2.getDeck().drawCard();
-  }
-  for ( int i = 0; i < p1..length+5; i++ ) {
-    rect( width / (p1.units.length + 2) * (i+1), height/4 * 3, 50, 50);
-  }
-  System.out.println(p1.hand[4]);
+  // for( int i = 0; i < 8; i++ ){
+  //   p1.getDeck().drawCard();
+  //   p2.getDeck().drawCard();
+  // }
+  // for ( int i = 0; i < p1..length+5; i++ ) {
+  //   rect( width / (p1.units.length + 2) * (i+1), height/4 * 3, 50, 50);
+  // }
+  // System.out.println(p1.hand[4]);
 }
 
 void draw() {
@@ -28,11 +24,52 @@ void draw() {
   //GAME LOGIC
 
   //update graphics SECOND
+  String p1name = "";
+  String p2name = "";
+  if (keyPressed) {
+    while (key != ENTER || key != RETURN) {
+      textSize(32);
+      text("Player 1, please enter your name: " + p1name, width / 2, height / 2);
+      if (key == ESC) {
+        redraw();
+      }
+      else if (key == BACKSPACE) {
+        p1name = p1name.substring(0, p1name.length() - 1);
+      }
+      else if (key != ENTER && key != RETURN) {
+        p1name += key;
+      }
+    }
+    while (key != ENTER || key != RETURN) {
+      textSize(32);
+      text("Player 2, please enter your name: " + p2name, width / 2, height / 2);
+      if (key == ESC) {
+        redraw();
+      }
+      else if (key == BACKSPACE) {
+        p2name = p2name.substring(0, p2name.length() - 1);
+      }
+      else if (key != ENTER && key != RETURN) {
+        p2name += key;
+      }
+    }
+  }
+  
+  p1 = new Player(p1name, 0, new Deck());
+  p2 = new Player(p2name, 1, new Deck());
+  p1.getDeck().marines();
+  p2.getDeck().marines();
 
   if (p1.isDead()) {
-    p1.setLife(30);
+    fill(0, 200);
+    rect(0, 0, 1024, 720);
+    textSize(32);
+    text(p2.getName() + "has won!", width / 2, height / 2);
   } else if (p2.isDead()) {
-    p2.setLife(30);
+    fill(0, 200);
+    rect(0, 0, 1024, 720);
+    textSize(32);
+    text(p1.getName() + "has won!", width / 2, height / 2);
   }
 
   // //health
@@ -42,14 +79,14 @@ void draw() {
 
   // //remove health
   fill(0);
-  arc(width / 2, 0, 225, 225, 0, PI - p2.lifePercent());
-  arc(width / 2, height, 225, 225, p1.lifePercent() - PI, 0);
+  arc(width / 2, 0, 225, 225, 0, PI - p2.hpPercent());
+  arc(width / 2, height, 225, 225, p1.hpPercent() - PI, 0);
 
   //testing tool
   if (mousePressed) {
-    p1.setLife(p1.getLife() - 1);
-    p2.setLife(p2.getLife() - 1);
-    System.out.println(p1.getLife());
+    p1.setHealth(p1.getHealth() - 1);
+    p2.setHealth(p2.getHealth() - 1);
+    System.out.println(p1.getHealth());
   }
 }
 

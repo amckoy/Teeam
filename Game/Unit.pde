@@ -89,6 +89,7 @@ public class Unit extends Card {
   public int setHealth(int newHP) {
     int temp = health;
     health = newHP;
+    isDead();
     return temp;
   }
 

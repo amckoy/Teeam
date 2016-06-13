@@ -9,19 +9,25 @@ public class Player {
   private boolean isDead;
   public Card activeSpell;
   public Deck deck;
+  String name;
 
   //constructor
-  public Player(int cRace, Deck cDeck) {
+  public Player(String newName, int cRace, Deck cDeck) {
     race = cRace;
     health = 30;
     resources = 1;
     isDead = false;
     deck = cDeck;
+    name = newName;
   }
     
   // Mutators and Accessors
   public int getRace() {
     return race;
+  }
+
+  public String getName() {
+    return name;
   }
 
   public int getHealth() {

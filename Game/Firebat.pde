@@ -1,15 +1,15 @@
-public class Marine extends Unit {
+public class Firebat extends Unit {
 
-  public Marine(Deck newDeck) {
-    super(1, 2, 2, 1, newDeck);
-    name = "Marine";
+  public Firebat(Deck newDeck) {
+    super(2, 0, 3, 2, newDeck);
+    name = "Firebat";
     isAerial = false;
     isCloaked = false;
     isDetector = false;
   }
 
   public PImage getImage() {
-    return loadImage("marine.jpg");
+    return loadImage("firebat.jpg");
   }
 
   public String getDescription() {

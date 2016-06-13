@@ -25,14 +25,14 @@ public class CardTyper {
     //terran
     if (race == 0) {
       typer.put(new CardTuple(2, 2, 1), (Marine)(new Object()));
-      typer.put(new CardTuple(0, 3, 2), (Firebat)(new Object()));
+      typer.put(new CardTuple(3, 0, 2), (Firebat)(new Object()));
       typer.put(new CardTuple(3, 3, 3), (Ghost)(new Object()));
       typer.put(new CardTuple(0, 0, 3), (Medic)(new Object()));
-      typer.put(new CardTuple(0, 1, 2), (Vulture)(new Object()));
-      typer.put(new CardTuple(0, 3, 1), (SpiderMine)(new Object()));
-      typer.put(new CardTuple(0, 3, 5), (SiegeTank)(new Object()));
-      typer.put(new CardTuple(4, 2, 3), (Goliath)(new Object()));
-      typer.put(new CardTuple(4, 2, 2), (Wraith)(new Object()));
+      typer.put(new CardTuple(1, 0, 2), (Vulture)(new Object()));
+      typer.put(new CardTuple(3, 0, 1), (SpiderMine)(new Object()));
+      typer.put(new CardTuple(3, 0, 5), (SiegeTank)(new Object()));
+      typer.put(new CardTuple(2, 4, 3), (Goliath)(new Object()));
+      typer.put(new CardTuple(2, 4, 2), (Wraith)(new Object()));
       typer.put(new CardTuple(0, 0, 5), (Dropship)(new Object()));
       typer.put(new CardTuple(0, 0, 4), (ScienceVessel)(new Object()));
       typer.put(new CardTuple(6, 6, 6), (BattleCruiser)(new Object()));

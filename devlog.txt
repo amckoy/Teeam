@@ -76,3 +76,6 @@ Mon, 06/13/16, 12:38 AM
 Mon, 06/13/16, 02:45 AM
 	Ayman: moved everything over to ground and attack instead of attack
 
+Mon, 06/13/16, 03:32 AM
+	Ayman: added some terran classes
+
