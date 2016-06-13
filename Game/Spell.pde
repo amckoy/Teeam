@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 abstract class Spell extends Card {
 
   private int damage;
@@ -57,7 +56,4 @@ abstract class Spell extends Card {
     
   }
     
-=======
-public class Spell extends Card {
->>>>>>> c72c97cc65088a045fa009a9cf73bf0348d7c810
 }
