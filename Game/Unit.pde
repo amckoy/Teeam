@@ -1,96 +1,101 @@
+/* the basic super-class for each type of unit */
+
 public class Unit extends Card {
-
-  //Attributes
-  boolean isDead;
-  boolean isAerial;
-  boolean isCloaked;
-  boolean isDetector;
-  int maxLife;
-  int life;
-  int groundAttack;
-  int airAttack;
-
-  //Constructors
-  Unit() {
-    this(0, "foo", false, false, false, 1, 1, 1, 1);
-  }
-
-  Unit(int newCost, String newName, boolean newIsAerial, boolean newIsCloaked, boolean newIsDetector, int newMaxLife, int newLife, int newGroundAttack, int newAirAttack) {
-    super(newCost, newName);
-    isDead = false;
-    isAerial = newIsAerial;
-    isCloaked = newIsCloaked;
-    isDetector = newIsDetector;
-    maxLife = newMaxLife;
-    life = newLife;
-    groundAttack = newGroundAttack;
-    airAttack = newAirAttack;
-  }
-
-  //Accessors + Mutators
-  int getMaxLife() {
-    return maxLife;
-  }
+	
+  // do we need boolean? or just function
+  private boolean isDead;
+  //protected because only actually initialized units will have this
+  protected boolean isAerial;
+  protected boolean isCloaked;
+  protected boolean isDetector;
+  private int maxHealth;
+  private int health;
+  private int attack;
+  //this is to make life easier for abilities and such
+  private Deck deck;
   
-  void setMaxLife(int newMaxLife) {
-    maxLife = newMaxLife;
+  public Unit(int hp, int atk, int newCost, Deck newDeck) {
+    super(newCost);
+    health = hp;
+    maxHealth = hp;
+    attack = atk;
+    isDead = false;
+    deck = newDeck;
   }
 
-  int getLife() {
-    return life;
+	//Accessors + Mutators
+  public int getMaxHealth() {
+    return maxHealth;
   }
 
-  void setLife(int newLife) {
-    life = newLife;
+  public Deck getDeck() {
+    return deck;
   }
 
-  int getGroundAttack() {
-    return groundAttack;
+  public int getAttack() {
+    return attack;
   }
 
-  void setGroundAttack(int newGroundAttack) {
-    groundAttack = newGroundAttack;
+  public int getHealth() {
+    return health;
   }
 
-  int getAirAttack() {
-    return airAttack;
-  }
-
-  void setAirAttack(int newAirAttack) {
-    airAttack = newAirAttack;
-  }
-
-  boolean isDead() {
-    if ( life <= 0 ) {
+  public boolean isDead() {
+    if( health <= 0 ) {
       isDead = true;
     }
-    else{
+    else {
       isDead = false;
     }
     return isDead;
   }
 
-  boolean isAerial() {
+  public boolean isAerial() {
     return isAerial;
   }
 
-  void setIsAerial(boolean newIsAerial) {
-    isAerial = newIsAerial;
-  }
-
-  boolean isCloaked() {
+  public boolean isCloaked() {
     return isCloaked;
   }
 
-  void setIsCloaked(boolean newIsCloaked) {
-    isCloaked = newIsCloaked;
-  }
-
-  boolean isDetector() {
+  public boolean isDetector() {
     return isDetector;
   }
 
-  void setIsDetector(boolean newIsDetector) {
-    isDetector = newIsDetector;
+  public boolean setAerial(boolean newAerial) {
+    boolean temp = isAerial;
+    isAerial = newAerial;
+    return temp;
   }
+
+  public boolean setCloaked(boolean newCloaked) {
+    boolean temp = isCloaked;
+    isCloaked = newCloaked;
+    return temp;
+  }
+
+  public boolean setDetector(boolean newDetector) {
+    boolean temp = isDetector;
+    isDetector = newDetector;
+    return temp;
+  }
+  
+  public int setHealth(int newHP) {
+    int temp = health;
+    health = newHP;
+    return temp;
+  }
+
+  public int setAttack(int newAttack) {
+    int temp = attack;
+    attack = newAttack;
+    return temp;
+  }
+
+  
+  
+  void draw() {
+    
+  }
+  
 }
