@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /* Class to manage deck of players, and to draw their individual board*/
 
 import java.util.LinkedList;
@@ -148,3 +149,25 @@ public class Deck {
   }
   
 }
+=======
+import java.util.LinkedList;
+
+public class Deck {
+
+  //Attributes
+  boolean outOfCards;
+  LinkedList<Card> deck;
+  
+  //Constructor
+  Deck() {
+  }
+  
+  //Methods
+  void marines() {
+    for(int i = 0; i < 40; i++){
+      Marine marine = new Marine(); 
+      deck.addFirst( marine );
+    }
+  }
+}
+>>>>>>> c72c97cc65088a045fa009a9cf73bf0348d7c810

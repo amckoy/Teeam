@@ -63,7 +63,13 @@ Fri, 06/10/16, 11:46 AM
 
 Sun, 06/12/16, 12:57 PM
 	Derek: fleshed out unit card and player
+<<<<<<< HEAD
  
 Sun, 06/12/16, 09:59 PM
 	Ayman: Did deck, got spell working, created a deck structure, created a card-defining structure, added a few basic card classes
+=======
+
+Sun, 06/12/16, 02:26 PM
+	Derek: fleshed more stuff out
+>>>>>>> c72c97cc65088a045fa009a9cf73bf0348d7c810
 
