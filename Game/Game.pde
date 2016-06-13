@@ -1,20 +1,29 @@
 import java.util.Queue;
 
 // Attributes
+Queue turnOrder;
 Player p1;
 Player p2;
-Queue turnOrder;
 Deck p1Deck;
 Deck p2Deck;
 
 void setup() {
   size(1000, 720);
   background(0);
+  p1Deck = new Deck();
+  p1Deck.marines();
+  p2Deck = new Deck();
+  p2Deck.marines();
   p1 = new Player(0, p1Deck);
   p2 = new Player(1, p2Deck);
+  for( int i = 0; i < 8; i++ ){
+    p1.deck.drawCard();
+    p2.deck.drawCard();
+  }
   for ( int i = 0; i < p1.units.length+5; i++ ) {
     rect( width / (p1.units.length + 2) * (i+1), height/4 * 3, 50, 50);
   }
+  System.out.println(p1.hand[4]);
 }
 
 void draw() {
